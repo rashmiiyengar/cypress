@@ -1,0 +1,14 @@
+{
+  "name": "cypressproject",
+  "version": "1.0.0",
+  "description": "Vypress Automation project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rashmi Soundar",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^13.13.2"
+  }
+}
