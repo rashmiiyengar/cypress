@@ -6,6 +6,8 @@ describe("Test Contact us form via WebDriveruniversity", ()=>{
            
             cy.visit("https://webdriveruniversity.com/Contact-Us/contactus.html");
             //cy.get('#contact-us').invoke('removeAttr', '__').click({force: true});
+            cy.document().should('have.a.property','title').and('eq','WebDriver | Contact Us');
+            cy.title().should("include","WebDriver | Contact Us");
             cy.get('[name="first_name"]').type("adam");
             cy.get('[name="last_name"]').type("bill")
             cy.get('[name="email"]').type("test@gmail.com")
@@ -13,7 +15,7 @@ describe("Test Contact us form via WebDriveruniversity", ()=>{
             cy.get('[type="submit"]').click();
         });
  
-        it.only("Should not be able to submit a successfull submission via contact us form as all fields are required",()=>{
+        it("Should not be able to submit a successfull submission via contact us form as all fields are required",()=>{
             
             cy.visit("https://webdriveruniversity.com/Contact-Us/contactus.html");
             cy.get('[name="first_name"]').type("add");
