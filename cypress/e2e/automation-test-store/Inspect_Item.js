@@ -7,7 +7,6 @@ describe('Inspect automation test store items on home page using chainn  of comm
         cy.visit("https://automationteststore.com/");
         cy.get('#block_frame_featured_1769 > .thumbnails > :nth-child(1) > .fixed_wrapper > .fixed > .prdocutname').click();
         cy.log("cypress log");
-      
     });
 
     it('click on first item using itemtext', () => {
