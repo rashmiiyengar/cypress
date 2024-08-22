@@ -39,6 +39,8 @@ describe("Alias and invoke", () => {
       })
       .then(() => {
         cy.log("Total of both sale and non sale items " + itemsTotal);
+
+        expect(itemsTotal).to.equal(648.5);
       });
   });
 });
