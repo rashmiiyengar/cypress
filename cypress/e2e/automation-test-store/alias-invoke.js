@@ -1,6 +1,8 @@
 /// <reference types="cypress" />
 /// <reference types="cypress-xpath" />
 
+const { forEach } = require("cypress/types/lodash");
+
 describe('Alias and invoke', () => {
 
     it('Validate a specific haircare product', () => {
@@ -12,7 +14,7 @@ describe('Alias and invoke', () => {
         cy.get('@productName').should('include','Seaweed Conditioner');
     });
 
-    it.only('Validate products on home page', () => {
+    it('Validate products on home page', () => {
         cy.visit("https://automationteststore.com");
 
         cy.get('.thumbnail').as('product');
@@ -22,5 +24,7 @@ describe('Alias and invoke', () => {
 
         
     });
+
+   
 
 });
