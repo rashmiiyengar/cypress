@@ -6,7 +6,7 @@ describe('Verifying variables, cypress commands and jquery commands', () => {
         cy.visit("https://automationteststore.com/");
          cy.get("a[href*='/category&path=']").contains("Makeup").click();
 
-        //following code will fail
+        //Following code will fail
         //const header= cy.get("h1 .maintext");
         //cy.log(header.text());
 
@@ -17,7 +17,7 @@ describe('Verifying variables, cypress commands and jquery commands', () => {
         })
     });
 
-    it.only('Validate properties of contactus page', () => {
+    it('Validate properties of contactus page', () => {
         cy.visit("https://automationteststore.com/index.php?rt=content/contact");
 
         //Use cypress commands and chaining
@@ -31,14 +31,8 @@ describe('Verifying variables, cypress commands and jquery commands', () => {
             //Embedded commands closures
             cy.get('#field_11').then((fnText)=>{
                 cy.log(fnText.text());
-
             })
-
         })
-
-        //embedded commands closures
-        
-
 
     });
 
