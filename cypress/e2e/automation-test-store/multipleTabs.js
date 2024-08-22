@@ -1,7 +1,7 @@
 /// <reference types="Cypress" />
 
 
-describe('manage multiple tabs my jsquery workaround', () => {
+describe('manage multiple tabs by jquery workaround', () => {
     it('open contact us page', () => {
 
         cy.visit("https://webdriveruniversity.com");
