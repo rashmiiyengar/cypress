@@ -1,10 +1,7 @@
 /// <reference types="Cypress" />
 
 describe('Same origin policy', () => {
-    it('Validate Navigating to two super domains', () => {
-        cy.visit("https://webdriveruniversity.com");
-        cy.visit("https://automationteststore.com/");
-    });
+    
 
     it.only('Validate visiting sub domain', () => {
         cy.visit("https://webdriveruniversity.com");
