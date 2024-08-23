@@ -9,7 +9,6 @@ describe("Validate web driver uni home page links", ()=>{
         cy.url().should('include','contactus');
         
         cy.go('back');
-        
         cy.reload();
         cy.reload(); //reload without using cache
         cy.url().should('include','webdriveruniversity');
