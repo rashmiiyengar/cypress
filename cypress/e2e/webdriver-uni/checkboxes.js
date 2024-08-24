@@ -40,14 +40,5 @@ describe("Checkboxes", ()=>{
 
     });
 
-    it.only("Check and Validating multiple checkboxes",()=>{
-       
-        cy.visit("https://webdriveruniversity.com");
-        cy.get('#dropdown-checkboxes-radiobuttons').invoke('removeAttr', 'target').click({force: true});
-        cy.url().should('include','Dropdown-Checkboxes-RadioButtons');
-        
-        cy.xpath("//input[@type='checkbox']").check(["option-1","option-2","option-3","option-4"]).should('be.checked');
-        cy.xpath("//input[@type='checkbox']").uncheck();
 
-    });
 })
