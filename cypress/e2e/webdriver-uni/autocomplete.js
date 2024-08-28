@@ -21,7 +21,6 @@ describe("Handling Autocomplete", ()=>{
                 
             }
             }).then(()=>{
-
                 cy.get('#myInput').type('g');
                 cy.get('#myInputautocomplete-list > *').each(($ele,index,$list)=>{
                     const prod=  $ele.text();
@@ -30,7 +29,6 @@ describe("Handling Autocomplete", ()=>{
                       if(prod === prodToSel)
                       {
                           $ele.trigger('click');
-          
                           cy.get('#submit-button').click();
                           cy.url().should('include',prodToSel);
                           
