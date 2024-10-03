@@ -9,7 +9,17 @@
   "author": "Rashmi Soundar",
   "license": "ISC",
   "dependencies": {
-    "chai": "^5.1.1"
+    "babel-core": "^6.26.3",
+    "base64-js": "^1.5.1",
+    "buffer-crc32": "^1.0.0",
+    "chai": "^5.1.1",
+    "marko": "^5.35.19",
+    "mustache": "^4.2.0",
+    "plates": "^0.4.11",
+    "process": "^0.11.10",
+    "slm": "^2.0.0",
+    "squirrelly": "^9.1.0",
+    "toffee": "^0.3.7"
   },
   "devDependencies": {
     "@cypress/xpath": "^2.0.3",
