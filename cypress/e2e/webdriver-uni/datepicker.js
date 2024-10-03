@@ -14,7 +14,7 @@ describe("Select date picker", () => {
     it("Select a date in future ", () => {
         cy.get("#datepicker").click();
         let date = new Date();
-        date.setDate(date.getDate() +30); //get current date
+        date.setDate(date.getDate() +301); //get current date
         
         let futureYear = date.getFullYear();
         let futureMonth = date.toLocaleString("default",{month:"long"})
@@ -40,10 +40,15 @@ describe("Select date picker", () => {
                         selectMonthAndYear();
                     }
                 })
-            });
+            })
 
         }
 
+        function selectFutureDat(){
+            cy.get('[class="day"]').contains(futureDay).click()
+        }
+        
         selectMonthAndYear();
+        selectFutureDat();
     });
   });
