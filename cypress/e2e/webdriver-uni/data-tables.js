@@ -1,5 +1,5 @@
 /// <reference types="Cypress" />
-describe("Hnadling data via webdriver uni", () => {
+describe("Handling data via webdriver uni", () => {
     beforeEach(() => {
       cy.visit("http://webdriveruniversity.com/");
       cy.get("#data-table").invoke("removeAttr", "target").click({ force: true });
