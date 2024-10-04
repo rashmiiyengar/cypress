@@ -28,6 +28,11 @@ Cypress.Commands.add("selectProduct",(productName)=>{
     });
 } )
 
+Cypress.Commands.add("naviagetTo_Webdriveruni",()=>{
+    cy.visit("/");
+    
+} )
+
 Cypress.Commands.add("addProductToBasket",(productName)=>{
     cy.get('.fixed_wrapper .prdocutname').each(($el, index, $list)=>{
         if($el.text() === (productName)){
@@ -38,11 +43,11 @@ Cypress.Commands.add("addProductToBasket",(productName)=>{
 } )
 
 Cypress.Commands.add("webDriverUni_Contactform_Submission",(firstName,lastName,email,comments,$selector)=>{
-            cy.get('[name="first_name"]').type(firstName);
+            
+            cy.get('[name="first_name"]').should('exist').type(firstName);
             cy.get('[name="last_name"]').type(lastName)
             cy.get('[name="email"]').type(email)
             cy.get('textarea.feedback-input').type(comments);
-
             cy.get('[type="submit"]').click();  
 } )
 

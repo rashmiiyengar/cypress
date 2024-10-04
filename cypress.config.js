@@ -6,7 +6,8 @@ module.exports = defineConfig({
     defaultCommandTimeout:10000,
     pageLoadTimeout:120000,
     env:{
-      firstName:"Rash"
+      firstName:"Rash",
+      webdriveruni_homepage: "https://webdriveruniversity.com",
     },
     baseUrl: 'https://webdriveruniversity.com',
     video: false, // Enable video recording
