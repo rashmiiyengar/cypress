@@ -5,6 +5,7 @@ import Contact_Us_PO from "../../support/pageObjects/webdriver-uni/Contact_Us_PO
 describe("Test Contact us form via WebDriveruniversity", ()=>{
     const homepage_PO = new Homepage_PO;
     const contactus_PO= new Contact_Us_PO();
+
     before(()=>{
         cy.fixture("example").then((data)=>{
             globalThis.data=data;
@@ -13,7 +14,10 @@ describe("Test Contact us form via WebDriveruniversity", ()=>{
 
     beforeEach(()=>{
         homepage_PO.visitHomePage();
+        cy.wait(3000)
         homepage_PO.clickon_Contactus_Button();
+
+        //cy.pause();
         //cy.document().should('have.a.property','title').and('eq','WebDriver | Contact Us');
         //cy.title().should("include","WebDriver | Contact Us");
     })
@@ -30,6 +34,5 @@ describe("Test Contact us form via WebDriveruniversity", ()=>{
         it("using envirnoment variables ",()=>{
          cy.webDriverUni_Contactform_Submission(Cypress.env("firstName"),data.lastName,data.email,data.body) 
         });
-
 
 })

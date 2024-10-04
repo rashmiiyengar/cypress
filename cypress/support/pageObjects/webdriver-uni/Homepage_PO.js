@@ -1,7 +1,7 @@
 class Homepage_PO{
 
     visitHomePage(){
-        cy.visit(Cypress.env("webdriveruni_homepage"));
+        cy.visit(Cypress.env("webdriveruni_homepage"),{timeout:60000});
     }
 
     clickon_Contactus_Button(){

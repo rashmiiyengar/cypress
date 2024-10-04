@@ -3,7 +3,9 @@ class AutoStore_HairCare_PO{
  
     addHairCareProductstoBasket(){
         globalThis.data.productName.forEach(($ele)=>{
-            cy.addProductToBasket($ele); 
+            cy.addProductToBasket($ele).then(()=>{
+                debugger;
+            }); 
            })
     }
 
