@@ -11,8 +11,8 @@
 //
 // -- This is a parent command --
 // Cypress.Commands.add('login', (email, password) => { ... })
-//
-//
+
+
 // -- This is a child command --
 // Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
 //
@@ -26,6 +26,15 @@ Cypress.Commands.add("selectProduct",(productName)=>{
             cy.wrap($el).click();
         }
     });
+} )
+
+Cypress.Commands.add("webDriverUni_Contactform_Submission",(firstName,lastName,email,comments,$selector)=>{
+            cy.get('[name="first_name"]').type(firstName);
+            cy.get('[name="last_name"]').type(lastName)
+            cy.get('[name="email"]').type(email)
+            cy.get('textarea.feedback-input').type(comments);
+
+            cy.get('[type="submit"]').click();  
 } )
 
 // -- This will overwrite an existing command --
