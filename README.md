@@ -4,9 +4,9 @@ This project contains a suite of tests to validate the functionality of the web 
 
 
 # Key Features:
-Automated tests using Cypress
-Headless testing 
-Runs on different browsers like Chrome, Firefox, and Electron
+Automated tests using Cypress\
+Headless testing \
+Runs on different browsers like Chrome, Firefox, and Electron\
 Generates screenshots and videos of test failures.
 
 Getting Started
