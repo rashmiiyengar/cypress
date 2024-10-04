@@ -4,7 +4,7 @@ describe("Radio buttons", ()=>{
 
     it("Check specific radio button",()=>{
        
-        cy.visit("https://webdriveruniversity.com");
+        cy.visit("/");
         cy.get('#dropdown-checkboxes-radiobuttons').invoke('removeAttr', 'target').click({force: true});
         cy.url().should('include','Dropdown-Checkboxes-RadioButtons');
         
@@ -14,7 +14,7 @@ describe("Radio buttons", ()=>{
 
     it("validate the state of specific radio button",()=>{
        
-        cy.visit("https://webdriveruniversity.com");
+        cy.visit("/");
         cy.get('#dropdown-checkboxes-radiobuttons').invoke('removeAttr', 'target').click({force: true});
         cy.url().should('include','Dropdown-Checkboxes-RadioButtons');
         
