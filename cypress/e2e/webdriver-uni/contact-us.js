@@ -2,6 +2,12 @@
 
 describe("Test Contact us form via WebDriveruniversity", ()=>{
 
+    before(()=>{
+        cy.fixture("example").then((data)=>{
+            globalThis.data=data;
+        })
+    })
+
     beforeEach(()=>{
         cy.visit("https://webdriveruniversity.com/Contact-Us/contactus.html");
         //cy.get('#contact-us').invoke('removeAttr', '__').click({force: true});
@@ -27,8 +33,12 @@ describe("Test Contact us form via WebDriveruniversity", ()=>{
             cy.get('body').contains('Error: all fields are required');
         });
 
+        it.only("using envirnoment variables ",()=>{
+         cy.webDriverUni_Contactform_Submission(Cypress.env("firstName"),data.lastName,data.email,data.body) 
+        });
+
         //Using custom commands
-        it.only("using custom commands",()=>{
+        it("using custom commands",()=>{
             cy.webDriverUni_Contactform_Submission("rash","iyer","rrr@gmail.com","thanks")
         });
 
