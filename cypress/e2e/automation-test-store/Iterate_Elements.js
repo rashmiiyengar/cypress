@@ -16,11 +16,13 @@ describe('Iterate over elements', () => {
         cy.visit("https://automationteststore.com/index.php?rt=content/contact");
         cy.get("a[href*='/category&path=']").contains("Hair Care").click();
 
-        cy.get('.fixed_wrapper .prdocutname').each(($el, index, $list)=>{
-            if($el.text().includes('Seaweed Conditioner')){
-                cy.wrap($el).click();
-            }
-        });
+        // cy.get('.fixed_wrapper .prdocutname').each(($el, index, $list)=>{
+        //     if($el.text().includes('Seaweed Conditioner')){
+        //         cy.wrap($el).click();
+        //     }
+        // });
+        //using custom commands
+        cy.selectProduct('Seaweed Conditioner');
 
     });
 
