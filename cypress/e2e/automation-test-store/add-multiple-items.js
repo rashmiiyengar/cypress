@@ -17,9 +17,6 @@ describe('Add multiple items to basket', () => {
        globalThis.data.productName.forEach(($ele)=>{
         cy.addProductToBasket($ele); 
        })
-        
-
     });
-
     
 });
