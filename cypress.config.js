@@ -5,6 +5,7 @@ module.exports = defineConfig({
   e2e: {
     defaultCommandTimeout:10000,
     pageLoadTimeout:120000,
+    
     env:{
       firstName:"Rash",
       webdriveruni_homepage: "https://webdriveruniversity.com",

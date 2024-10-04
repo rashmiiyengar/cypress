@@ -7,6 +7,7 @@ class Contact_Us_PO{
         cy.get('[name="email"]').type(email)
         cy.get('textarea.feedback-input').type(comments);
         cy.get('[type="submit"]').click();  
+        
 } 
 
 }
