@@ -66,7 +66,8 @@ Clear Cypress Cache: If you face issues with cached files, run: npx cypress cach
 
 # Mochawesome Test report 
 
-<img width="1276" alt="Screenshot 2024-10-04 at 6 22 19 PM" src="https://github.com/user-attachments/assets/c8842b5b-5215-406c-b89e-b96090458948">
+<img width="1605" alt="Screenshot 2024-10-04 at 8 45 31 PM" src="https://github.com/user-attachments/assets/1c622ea9-1d3f-4ef6-a534-6bcca1185575">
+
 
 
 
