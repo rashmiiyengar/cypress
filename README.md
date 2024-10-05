@@ -60,5 +60,10 @@ Screenshots and videos will be stored in the /cypress/screenshots and /cypress/v
 # Additional Commands
 Clear Cypress Cache: If you face issues with cached files, run: npx cypress cache clear
 
+# Cypress Cloud Test results
+
+<img width="1276" alt="Screenshot 2024-10-04 at 6 22 19 PM" src="https://github.com/user-attachments/assets/f09f36ee-ff66-4ff8-8022-3402bea32395">
+
+
 
  
