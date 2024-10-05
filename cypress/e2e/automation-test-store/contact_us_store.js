@@ -4,6 +4,10 @@
 
 describe("Test Contact us form via Automation Test store", ()=>{
 
+    before(()=>{
+        //to set the screen size
+        //cy.viewport(250,750)
+    })
     it("Should be able to submit a successfull submission via contact us form",()=>{
         cy.visit("https://automationteststore.com/");
         cy.get("a[href$='contact']").click().then((text)=>console.log(text.text()));
